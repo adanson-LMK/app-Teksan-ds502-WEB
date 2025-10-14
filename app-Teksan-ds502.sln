@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app-Teksan-ds502", "app-Teksan-ds502.csproj", "{3E2E0BAE-DD8F-4612-8803-D7560FB9C272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E2E0BAE-DD8F-4612-8803-D7560FB9C272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2E0BAE-DD8F-4612-8803-D7560FB9C272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2E0BAE-DD8F-4612-8803-D7560FB9C272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2E0BAE-DD8F-4612-8803-D7560FB9C272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C795BAA0-3E08-4E90-8A4C-C5253F6DA074}
+	EndGlobalSection
+EndGlobal

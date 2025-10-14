@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - app_Teksan_ds502</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/app_Teksan_ds502.styles.css" asp-append-version="true" />
+    <link rel="preload" fetchpriority="high" as="image" href="~/images/FONDO - TEKSAN 2.jpg" type="image/jpeg">
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-page="/Index">
+                    <strong>TEKSAN</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link text-light" href="#historia">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#vision">Visión</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#mision">Misión</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#integrantes">Integrantes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+<!-- FOOTER -->
+<footer class="footer text-light py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+
+            <!-- Columna izquierda: Integrantes -->
+            <div id="integrantes" class="col-md-4 mb-3 mb-md-0">
+                <h5 class="text-info">Integrantes</h5>
+                <ul class="list-unstyled footer-list">
+
+                    <li>Flores Marquez, Luis        </li>
+                    <li>Silva Asencios, Adanson     </li>
+                    <li>Enriquez Señas, Omar        </li>
+                    <li>Silva Quispe, Teresa        </li>
+                    <li>Ramirez Saguio, Jastin      </li>
+                </ul>
+            </div>
+
+            <!-- Columna central: información -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <p class="mb-0">Sede - Independencia</p>
+            </div>
+
+            <!-- Columna derecha: logo SENATI -->
+            <div class="col-md-4 text-md-end">
+                <img src="~/images/LOGO SENATI.png" alt="SENATI" height="60" class="footer-logo">
+            </div>
+        </div>
+
+        <div class="text-center border-top mt-3 pt-3 small">
+            © 2025 TEKSAN - Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

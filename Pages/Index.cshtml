@@ -1,0 +1,73 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<!-- Hero principal -->
+<section id="hero" class="d-flex justify-content-center align-items-center text-light">
+    <div class="overlay"></div>
+
+    <div class="hero-content text-start">
+        <div class="hero-text">
+            <h1 class="display-5 fw-bold animate-text">Bienvenidos a TEKSAN</h1>
+            <p class="lead animate-text">Innovación, Tecnología y Visión Empresarial</p>
+            <a href="#historia" class="btn btn-dark btn-lg mt-3 animate-text">Conócenos</a>
+        </div>
+    </div>
+</section>
+
+
+<main role="main" class="pb-3">
+    <div class="container mt-5 text-center text-light">
+
+        <!-- HISTORIA -->
+        <section id="historia" class="my-5">
+            <div class="card bg-dark text-light border-0 p-4 shadow seccion-card mx-auto">
+                <img src="~/images/HISTORIA - TEKSAN.png" alt="Historia TEKSAN" class="icono mx-auto d-block mb-3">
+                <h2 class="text-info mb-3">Historia</h2>
+                <p>
+                    TEKSAN SAC nació en Lima, Perú, en julio de 2024, con el propósito claro: transformar ideas en
+                    soluciones digitales que realmente marquen la diferencia.
+                    Nuestra empresa busca ser la mejor en el desarrollo de programas, ofreciendo servicios que ayuden de
+                    manera significativa a sus clientes.
+                    Apuntando a la mejora progresiva teniendo como base las críticas constructivas y fundamentadas de los
+                    clientes a los que se les ofrece nuestros servicios.
+                </p>
+            </div>
+        </section>
+
+        <!-- VISIÓN Y MISIÓN -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-5 mb-4">
+                <section id="vision" class="card bg-dark text-light border-0 p-4 shadow seccion-card">
+                    <img src="~/images/VISION - TEKSAN.png" alt="Visión TEKSAN" class="icono mx-auto d-block mb-3">
+                    <h2 class="text-info mb-3">Visión</h2>
+                    <p>
+                        Crear una nueva cultura de desarrollo de software en América Latina: donde la tecnología no solo
+                        funcione, sino que inspire, evolucione con el usuario y genere valor duradero.
+                        Con nuestros valores como insignia, lideramos con empatía, transformamos cada crítica, idea o
+                        necesidad en oportunidades de mejora real.
+                    </p>
+                </section>
+            </div>
+
+            <div class="col-md-5 mb-4">
+                <section id="mision" class="card bg-dark text-light border-0 p-4 shadow seccion-card">
+                    <img src="~/images/MISION - TEKSAN.png" alt="Misión TEKSAN" class="icono mx-auto d-block mb-3">
+                    <h2 class="text-info mb-3">Misión</h2>
+                    <p>
+                        Desarrollar soluciones digitales de alto impacto que resuelvan problemas reales, poniendo al
+                        cliente en el centro de cada decisión.
+                        Nos guiamos por su satisfacción, actuamos con transparencia y evolucionamos con sus necesidades.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="body-content">
+                
+        </div>
+    </div>
+</main>
