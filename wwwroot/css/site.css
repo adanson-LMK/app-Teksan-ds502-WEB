@@ -1,19 +1,5 @@
-/*
-  Modern & Elegant Redesign
-  - Palette: Dark Navy, Light Slate, Green Accent
-  - Typography: Poppins
-  - Style: Glassmorphism Navbar, Ghost Buttons, Subtle Animations
-*/
 
 :root {
-    --dark-navy: #0A192F;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --green: #64FFDA;
     --font-sans: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -24,83 +10,62 @@ html {
 }
 
 body {
-    background-color: var(--dark-navy);
+    background-color: #0e1a2b;
     font-family: var(--font-sans);
-    color: var(--light-slate);
+    color: #fff;
     overflow-x: hidden;
 }
 
 /* ================= GENERAL STYLING ================= */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--lightest-slate);
     font-weight: 600;
 }
 
 a {
-    color: var(--green);
-    text-decoration: none;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-    a:hover {
-        color: var(--green);
-        opacity: 0.9;
-    }
-
 /* ======= NAVBAR ======= */
 .navbar {
-    background-color: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    transition: all 0.25s ease-in-out;
-    border-bottom: 1px solid var(--light-navy);
+    background-color: rgba(14, 26, 43, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-brand strong {
-    color: var(--lightest-slate);
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-.nav-link {
-    color: var(--light-slate) !important;
-    font-weight: 300;
-}
-
-    .nav-link:hover {
-        color: var(--green) !important;
-    }
-
-.navbar-toggler {
-    border-color: var(--slate);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28168, 178, 209, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.nav-link:hover {
+    color: #a8c7ff !important;
+    transform: translateY(-2px);
 }
 
 
-/* ================= HERO ================= */
+
 #hero {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url('../images/FONDO - TEKSAN 2.jpg') no-repeat center center/cover;
+    background: url('../images/FONDO - TEKSAN 2.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-    #hero .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(10, 25, 47, 0.7); /* Dark navy overlay */
-        z-index: 1;
-    }
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 20, 0.5);
+    z-index: 1;
+}
 
 .hero-content {
     position: relative;
@@ -109,8 +74,8 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centered vertically */
-    align-items: flex-start; /* Left aligned */
+    justify-content: center;
+    align-items: flex-start;
     padding: 0 8%;
 }
 
@@ -119,51 +84,45 @@ a {
     max-width: 550px;
 }
 
-    .hero-text h1 {
-        color: var(--white);
-        font-size: 3.5rem;
-        font-weight: 700;
-    }
+.hero-text h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
 
-    .hero-text p {
-        color: var(--light-slate);
-        font-size: 1.2rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
 
-    /* Modern Ghost Button */
-    .hero-text .btn {
-        background-color: transparent;
-        border: 1px solid var(--green);
-        color: var(--green);
-        padding: 12px 24px;
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-        border-radius: 4px;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
+.hero-text .btn-dark {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
 
-        .hero-text .btn:hover {
-            background-color: rgba(100, 255, 218, 0.1);
-            transform: translateY(-3px);
-        }
+.hero-text .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
 
 /* Animation */
 .animate-text {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     animation: fadeSlideIn 1s ease-out forwards;
 }
 
-    .animate-text:nth-child(2) {
-        animation-delay: 0.2s;
-    }
+.animate-text:nth-child(2) {
+    animation-delay: 0.2s;
+}
 
-    .animate-text:nth-child(3) {
-        animation-delay: 0.4s;
-    }
+.animate-text:nth-child(3) {
+    animation-delay: 0.4s;
+}
 
 @keyframes fadeSlideIn {
     to {
@@ -172,67 +131,59 @@ a {
     }
 }
 
-/* ================= SECCIONES (HISTORIA / VISIÓN / MISIÓN) ================= */
-.seccion-card {
-    background-color: var(--light-navy);
-    border: 1px solid var(--lightest-navy);
-    border-radius: 8px;
+
+.content-section {
+    background-color: #112240;
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    min-height: 380px;
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-    padding: 2.5rem;
 }
 
-    .seccion-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px -15px rgba(10, 25, 47, 0.7);
-    }
+.content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,0.7);
+}
 
-    .seccion-card h2 {
-        color: var(--green);
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
+.content-section .lead {
+    color: #a8c7ff;
+    font-weight: 300;
+}
 
-.icono {
-    width: 70px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-    filter: invert(84%) sepia(33%) saturate(375%) hue-rotate(100deg) brightness(100%) contrast(102%); /* Turns icons to the green accent color */
+.content-section .img-fluid {
+    transition: transform 0.4s ease;
+}
+
+.content-section:hover .img-fluid {
+    transform: scale(1.05);
 }
 
 /* ================= FOOTER ================= */
 .footer {
-    background-color: var(--dark-navy);
-    color: var(--slate);
+    background-color: #0b1522;
+    color: #a8c7ff;
     padding: 2rem 0;
-    border-top: 1px solid var(--light-navy);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-    .footer h5 {
-        color: var(--light-slate);
-        font-weight: 600;
-    }
+.footer h5 {
+    color: #fff;
+    font-weight: 600;
+}
 
-    .footer .col-md-4:nth-child(2) { /* Sede */
-        text-align: center;
-        font-size: 1rem;
-        color: var(--light-slate);
-    }
+.footer-list li {
+    color: #fff;
+}
 
 .footer-logo {
-    height: 50px;
+    height: 60px;
     transition: transform 0.3s ease;
 }
 
-    .footer-logo:hover {
-        transform: scale(1.05);
-    }
+.footer-logo:hover {
+    transform: scale(1.05);
+}
 
 .footer .small {
-    color: var(--slate);
+    color: #a8c7ff;
 }
