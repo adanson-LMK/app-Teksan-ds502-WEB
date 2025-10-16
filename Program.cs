@@ -1,4 +1,9 @@
+using app_Teksan_ds502.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSingleton<AzureStorageService>();
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();

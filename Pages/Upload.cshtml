@@ -1,0 +1,43 @@
+﻿@page
+@model app_Teksan_ds502.Pages.UploadModel
+@{
+    ViewData["Title"] = "Subir archivo a Azure Storage";
+}
+
+<style>
+    .upload-container {
+        margin-top: 150px; 
+        text-align: center;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: #0078d7;
+        color: white;
+        border: none;
+    }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+</style>
+
+
+<h2>Subir archivo a Azure Blob Storage</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" asp-for="Archivo" />
+    <button type="submit">Subir</button>
+</form>
+
+@if (Model.Mensaje != null)
+{
+    <div style="margin-top:15px">
+        @Html.Raw(Model.Mensaje)
+    </div>
+}
